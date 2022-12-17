@@ -1,8 +1,13 @@
 :root{
     --maincomponent: #184e77;
-    --cardwidth: max(450px, 70vw);
+    --cardwidth: max(450px, 45vw);
+    --cardcontentwidth: max(415px, 60%);
+    --accentcolor: #a8dadc;
+    --radius: 25px;
 }
-
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0px;
     overflow-x: hidden;
@@ -57,7 +62,16 @@ header{
     margin-top: 48px;
     background-color: var(--maincomponent);
     width: var(--cardwidth);
-    border-radius: 25px;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+.main-card>*{
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .heading-container{
@@ -65,6 +79,9 @@ header{
     align-items: center;
     justify-content: center;
     gap: 12px;
+    background-color: var(--accentcolor);
+    width: var(--cardcontentwidth);
+    border-radius: var(--radius);
 }
 
 .heading-container>h1{
@@ -74,5 +91,16 @@ header{
 .emoji{
     width: 50px;
     height: 50px;
+}
+
+.card{
+    width: var(--cardcontentwidth);
+    background-color: var(--accentcolor);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+.author{
+    font-weight: bold;
 }
 
