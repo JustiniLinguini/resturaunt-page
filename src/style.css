@@ -1,0 +1,78 @@
+:root{
+    --maincomponent: #184e77;
+    --cardwidth: max(450px, 70vw);
+}
+
+body{
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+#content{
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 200vh;
+    width: 100vw;
+    background: url('./imgs/background-image.jpg');
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    border-style: none;
+}
+
+/*header + components styling */
+header{
+    width: 100%;
+    background-color: var(--maincomponent);
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap:24px;
+}
+
+.page-selector{
+    color: white;
+    background-color: grey;
+    border-radius: 5px;
+
+    width: 100px;
+    height: 50px;
+}
+
+.page-selector:hover{
+    cursor: pointer;
+}
+.page-selector:active{
+    transform: scale(0.9);
+}
+
+
+/*body styling*/
+
+.main-card{
+    margin-top: 48px;
+    background-color: var(--maincomponent);
+    width: var(--cardwidth);
+    border-radius: 25px;
+}
+
+.heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.heading-container>h1{
+    display: inline-block;
+}
+
+.emoji{
+    width: 50px;
+    height: 50px;
+}
+
