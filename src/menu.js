@@ -6,28 +6,26 @@ class menuItem{
         this.description = description;
         this.price = price;
     }
+
+    makeCard(){
+        const menuCard = makeDiv('card');
+
+        const menuTitle = document.createElement('h3');
+        menuTitle.textContent = this.title;
+    
+        const menuDescription = makePara('menu-description');
+        menuDescription.textContent = this.description;
+    
+        const menuPrice = makePara('price');
+        menuPrice.textContent = this.price;
+    
+        menuCard.appendChild(menuTitle);
+        menuCard.appendChild(menuDescription);
+        menuCard.appendChild(menuPrice);
+    
+        return menuCard;
+    }
 }
-
-function makeMenuCard(menuItem){
-    const menuCard = makeDiv('card');
-
-    const menuTitle = document.createElement('h3');
-    menuTitle.textContent = menuItem.title;
-
-    const menuDescription = makePara('menu-description');
-    menuDescription.textContent = menuItem.description;
-
-    const menuPrice = makePara('price');
-    menuPrice.textContent = menuItem.price;
-
-    menuCard.appendChild(menuTitle);
-    menuCard.appendChild(menuDescription);
-    menuCard.appendChild(menuPrice);
-
-    return menuCard;
-}
-
-
 
 export default function menuCardComponent(){
 
@@ -106,15 +104,15 @@ export default function menuCardComponent(){
     mainCard.appendChild(headingContainer);
 
     mainCard.appendChild(beveragesHeading);
-    mainCard.appendChild(makeMenuCard(jellyMargherita));
-    mainCard.appendChild(makeMenuCard(ginTonic));
+    mainCard.appendChild(jellyMargherita.makeCard());
+    mainCard.appendChild(ginTonic.makeCard());
 
     mainCard.appendChild(sidesHeading);
-    mainCard.appendChild(makeMenuCard(toastJelly));
-    mainCard.appendChild(makeMenuCard(poutine));
+    mainCard.appendChild(toastJelly.makeCard());
+    mainCard.appendChild(poutine.makeCard());
 
     mainCard.appendChild(mainDishHeading);
-    mainCard.appendChild(makeMenuCard(krabbyPatty));
-    mainCard.appendChild(makeMenuCard(jellyBurger));
+    mainCard.appendChild(krabbyPatty.makeCard());
+    mainCard.appendChild(jellyBurger.makeCard());
     return mainCard;
 }
