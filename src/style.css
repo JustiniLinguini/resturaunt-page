@@ -78,14 +78,22 @@ header{
     margin-bottom: 24px;
 }
 
-.heading-container{
+.heading-container,
+.sub-heading-container{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
     background-color: var(--accentcolor);
-    width: var(--cardcontentwidth);
     border-radius: var(--radius);
+}
+
+.heading-container{
+    width: var(--cardcontentwidth);
+}
+
+.sub-heading-container{
+    width: calc(var(--cardcontentwidth)/2);
 }
 
 .heading-container>h1{
@@ -106,7 +114,9 @@ header{
     text-align: center;
 }
 
-.author{
+.author,
+.price{
     font-weight: bold;
 }
+
 
